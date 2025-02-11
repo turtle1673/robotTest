@@ -1,28 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-11T10:14:39.146275" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-11T11:30:13.033389" rpa="false" schemaversion="5">
 <suite id="s1" name="Register" source="c:\Users\CLASSROOM\Desktop\New folder\keywords\Register.robot">
 <kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2025-02-11T10:14:39.323119" level="INFO">Opening browser 'firefox' to base url 'https://automationexercise.com/'.</msg>
+<msg time="2025-02-11T11:30:13.211846" level="INFO">Opening browser 'firefox' to base url 'https://automationexercise.com/'.</msg>
 <arg>https://automationexercise.com/</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-11T10:14:39.322895" elapsed="7.598939"/>
+<status status="PASS" start="2025-02-11T11:30:13.211622" elapsed="7.990959"/>
 </kw>
-<test id="s1-t1" name="Go to SignUp Page" line="20">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:14:46.923425" level="INFO">Clicking button '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]'.</msg>
-<msg time="2025-02-11T10:14:46.991726" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-02-11T10:14:46.992220" level="FAIL">Button with locator '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]' not found.</msg>
+<test id="s1-t1" name="RegisterTest" line="60">
+<kw name="Check Home Page">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:21.215896" level="INFO">Current page contains text 'Full-Fledged practice website for Automation Engineers'.</msg>
+<arg>Full-Fledged practice website for Automation Engineers</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-02-11T11:30:21.204382" elapsed="0.011721"/>
+</kw>
+<status status="PASS" start="2025-02-11T11:30:21.203910" elapsed="0.012323"/>
+</kw>
+<kw name="Go to SignUp Page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:21.217559" level="INFO">Clicking element '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]'.</msg>
 <arg>//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="FAIL" start="2025-02-11T10:14:46.922877" elapsed="0.072751">Button with locator '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]' not found.</status>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:21.217130" elapsed="1.245234"/>
 </kw>
-<status status="FAIL" start="2025-02-11T10:14:46.922158" elapsed="0.074619">Button with locator '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]' not found.</status>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>New User Signup!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-11T11:30:22.462635" elapsed="0.007590"/>
+</kw>
+<status status="PASS" start="2025-02-11T11:30:21.216781" elapsed="1.253629"/>
+</kw>
+<kw name="Enter Name email">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:22.471573" level="INFO">Typing text 'myuser_name' into text field '//*[@id="form"]/div/div/div[3]/div/form/input[2]'.</msg>
+<arg>//*[@id="form"]/div/div/div[3]/div/form/input[2]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:22.471249" elapsed="0.046141"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:22.518026" level="INFO">Typing text 'myemail123@gmail.co' into text field '//*[@id="form"]/div/div/div[3]/div/form/input[3]'.</msg>
+<arg>//*[@id="form"]/div/div/div[3]/div/form/input[3]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:22.517712" elapsed="0.017562"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:22.535720" level="INFO">Clicking button '//*[@id="form"]/div/div/div[3]/div/form/button'.</msg>
+<arg>//*[@id="form"]/div/div/div[3]/div/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:22.535499" elapsed="1.151629"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Enter Account Information</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-11T11:30:23.687579" elapsed="0.013424"/>
+</kw>
+<status status="PASS" start="2025-02-11T11:30:22.470901" elapsed="1.230259"/>
+</kw>
+<kw name="Fill Data">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:23.702629" level="INFO">Clicking button '//*[@id="id_gender1"]'.</msg>
+<arg>//*[@id="id_gender1"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:23.702390" elapsed="0.224453"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:23.927938" level="INFO">Typing text '1234' into text field '//*[@id="password"]'.</msg>
+<arg>//*[@id="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:23.927328" elapsed="0.024956"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:23.952684" level="INFO">Clicking button '//*[@id="newsletter"]'.</msg>
+<arg>//*[@id="newsletter"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:23.952490" elapsed="0.222647"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:24.175916" level="INFO">Clicking button '//*[@id="optin"]'.</msg>
+<arg>//*[@id="optin"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:24.175492" elapsed="0.229902"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:24.406313" level="INFO">Selecting options from selection list '//*[@id="days"]' by value 1.</msg>
+<arg>//*[@id="days"]</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-11T11:30:24.405772" elapsed="0.278204"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:24.685101" level="INFO">Selecting options from selection list '//*[@id="years"]' by value 2021.</msg>
+<arg>//*[@id="years"]</arg>
+<arg>2021</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-11T11:30:24.684566" elapsed="0.244404"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:24.929347" level="INFO">Selecting options from selection list '//*[@id="months"]' by value 1.</msg>
+<arg>//*[@id="months"]</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-11T11:30:24.929160" elapsed="0.230541"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:25.160135" level="INFO">Typing text 'myfirstname' into text field '//*[@id="first_name"]'.</msg>
+<arg>//*[@id="first_name"]</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:25.159904" elapsed="0.024940"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:25.185802" level="INFO">Typing text 'mylastname' into text field '//*[@id="last_name"]'.</msg>
+<arg>//*[@id="last_name"]</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:25.185266" elapsed="0.026648"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:25.212840" level="INFO">Typing text 'up university' into text field '//*[@id="company"]'.</msg>
+<arg>//*[@id="company"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:25.212363" elapsed="0.023542"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:25.236431" level="INFO">Typing text 'my address' into text field '//*[@id="address1"]'.</msg>
+<arg>//*[@id="address1"]</arg>
+<arg>${address1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:25.236163" elapsed="0.020350"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:25.257035" level="INFO">Typing text 'my address2' into text field '//*[@id="address2"]'.</msg>
+<arg>//*[@id="address2"]</arg>
+<arg>${address2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:25.256768" elapsed="0.018055"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:25.275525" level="INFO">Selecting options from selection list '//*[@id="country"]' by value India.</msg>
+<arg>//*[@id="country"]</arg>
+<arg>India</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-02-11T11:30:25.275249" elapsed="0.013821"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:25.289625" level="INFO">Typing text 'my satate' into text field '//*[@id="state"]'.</msg>
+<arg>//*[@id="state"]</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:25.289339" elapsed="0.020092"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:25.309869" level="INFO">Typing text 'my City' into text field '//*[@id="city"]'.</msg>
+<arg>//*[@id="city"]</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:25.309633" elapsed="0.017863"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:25.327995" level="INFO">Typing text 'DG12G57' into text field '//*[@id="zipcode"]'.</msg>
+<arg>//*[@id="zipcode"]</arg>
+<arg>${zipcode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:25.327737" elapsed="0.017203"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:25.345433" level="INFO">Typing text '0123456789' into text field '//*[@id="mobile_number"]'.</msg>
+<arg>//*[@id="mobile_number"]</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T11:30:25.345196" elapsed="0.016102"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-11T11:30:25.361902" level="INFO">Clicking button '//*[@id="form"]/div/div/div/div[1]/form/button'.</msg>
+<msg time="2025-02-11T11:30:25.419650" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-11T11:30:25.419940" level="FAIL">ElementClickInterceptedException: Message: Element &lt;button class="btn btn-default" type="submit"&gt; is not clickable at point (232,835) because another element &lt;iframe id="aswift_3" name="aswift_3" src="https://googleads.g.doubleclick.net/pagead/html/r20250206/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=4&amp;uci=a!4&amp;btvi=3"&gt; obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+</msg>
+<arg>//*[@id="form"]/div/div/div/div[1]/form/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-11T11:30:25.361561" elapsed="0.061770">ElementClickInterceptedException: Message: Element &lt;button class="btn btn-default" type="submit"&gt; is not clickable at point (232,835) because another element &lt;iframe id="aswift_3" name="aswift_3" src="https://googleads.g.doubleclick.net/pagead/html/r20250206/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=4&amp;uci=a!4&amp;btvi=3"&gt; obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+</status>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>'ACCOUNT CREATED!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-02-11T11:30:25.423549" elapsed="0.000089"/>
+</kw>
+<status status="FAIL" start="2025-02-11T11:30:23.701993" elapsed="1.721784">ElementClickInterceptedException: Message: Element &lt;button class="btn btn-default" type="submit"&gt; is not clickable at point (232,835) because another element &lt;iframe id="aswift_3" name="aswift_3" src="https://googleads.g.doubleclick.net/pagead/html/r20250206/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=4&amp;uci=a!4&amp;btvi=3"&gt; obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+</status>
+</kw>
+<status status="FAIL" start="2025-02-11T11:30:21.202898" elapsed="4.221797">ElementClickInterceptedException: Message: Element &lt;button class="btn btn-default" type="submit"&gt; is not clickable at point (232,835) because another element &lt;iframe id="aswift_3" name="aswift_3" src="https://googleads.g.doubleclick.net/pagead/html/r20250206/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;adk=1812271801&amp;client=ca-pub-1677597403311019&amp;fa=1&amp;ifi=4&amp;uci=a!4&amp;btvi=3"&gt; obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:342:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:344:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:220:31
+</status>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-02-11T10:14:46.998933" elapsed="2.631013"/>
+<status status="PASS" start="2025-02-11T11:30:25.426827" elapsed="2.700297"/>
 </kw>
-<status status="FAIL" start="2025-02-11T10:14:39.150157" elapsed="10.480237"/>
+<status status="FAIL" start="2025-02-11T11:30:13.036421" elapsed="15.091153"/>
 </suite>
 <statistics>
 <total>
