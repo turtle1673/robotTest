@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-11T10:14:39.146275" rpa="false" schemaversion="5">
+<suite id="s1" name="Register" source="c:\Users\CLASSROOM\Desktop\New folder\keywords\Register.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-02-11T10:14:39.323119" level="INFO">Opening browser 'firefox' to base url 'https://automationexercise.com/'.</msg>
+<arg>https://automationexercise.com/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-11T10:14:39.322895" elapsed="7.598939"/>
+</kw>
+<test id="s1-t1" name="Go to SignUp Page" line="20">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:14:46.923425" level="INFO">Clicking button '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]'.</msg>
+<msg time="2025-02-11T10:14:46.991726" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-11T10:14:46.992220" level="FAIL">Button with locator '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]' not found.</msg>
+<arg>//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-11T10:14:46.922877" elapsed="0.072751">Button with locator '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]' not found.</status>
+</kw>
+<status status="FAIL" start="2025-02-11T10:14:46.922158" elapsed="0.074619">Button with locator '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]' not found.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-11T10:14:46.998933" elapsed="2.631013"/>
+</kw>
+<status status="FAIL" start="2025-02-11T10:14:39.150157" elapsed="10.480237"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Register" id="s1" pass="0" fail="1" skip="0">Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
